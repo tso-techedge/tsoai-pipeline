@@ -1,0 +1,6 @@
+[Unit]
+Description=Auto Deploy TSOAI App
+
+[Service]
+Type=oneshot
+ExecStart=/opt/tsoai/deploy.sh
