@@ -6,7 +6,13 @@
 chmod +x /opt/tsoai/deploy.sh
 ```
 
-## Timer
+## Service
+
+```sh
+cp tsoai-pipeline/system/* /etc/systemd/system
+```
+
+### Timer
 
 ```sh
 sudo systemctl daemon-reexec
@@ -15,7 +21,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now tsoai-deploy.timer
 ```
 
-### Test Timer
+#### Test Timer
 
 ```sh
 sudo systemctl start tsoai-deploy.service
