@@ -1,0 +1,12 @@
+# /etc/systemd/system/tsoai-deploy.timer
+
+[Unit]
+Description=Check for TSOAI updates and deploy every 5 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+Unit=tsoai-deploy.service
+
+[Install]
+WantedBy=timers.target
